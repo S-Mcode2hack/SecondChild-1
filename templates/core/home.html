@@ -4,4 +4,29 @@
 
 <h1>Home</h1>
 
+{%if user.is_authenticated%}
+
+<h2>Search </h2>
+
+<form action="{%url 'home'%}" method="get">
+    <input type="text" name="q" placeholder="Search profiles">
+    <input type="submit" value="Search">
+</form>
+
+{%for profile in profiles%}
+
+<div class="profile-card">
+    <h1>{{profile.child_name}}</h1>
+    <h2>{{profile.child_age}}</h2>
+</div>
+
+{%endfor%}
+
+{%else%}
+
+<h1>Welcome To The Second Child</h1>
+
+{%endif%}
+
+
 {%endblock%}

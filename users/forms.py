@@ -5,18 +5,22 @@ from .models import Profile
 from django import forms
 
 
+# Model Forms
 class UserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ["username", "email", "password1", "password2"]
 
 
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=150)
-    password = forms.CharField(max_length=150, widget=forms.PasswordInput())
-
-
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
-        fields = "__all__"
+        exclude = ["user", "is_complete"]
+
+
+# Other Forms
+class LoginForm(forms.Form):
+    username = forms.CharField(label="Enter Username", max_length=150)
+    password = forms.CharField(
+        label="Entert Password", max_length=150, widget=forms.PasswordInput()
+    )

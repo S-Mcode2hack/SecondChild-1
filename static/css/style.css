@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+}
+
+:root {
+    --var-primary: #007bff;
+    --var-secondary: #6c757d;
+    --var-success: #28a745;
+    --var-danger: #dc3545;
+    --var-warning: #ffc107;
+    --var-info: #17a2b8;
+    --var-light: #f8f9fa;
+    --var-dark: #343a40;
+}
+
+/* Globals */
+a {
+    text-decoration: none;
+    color: var(--var-primary);
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-link {
+    margin: 0 0.25rem;
+}
+
+
+/* Main */
+.profile-card {
+    border: 2px solid black;
+    border-radius: 10px;
+}

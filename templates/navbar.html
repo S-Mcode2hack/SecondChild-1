@@ -1,26 +1,24 @@
 {%block content%}
 
-{%if user.is_authenticated%}
 
-<nav>
-    <h1>Hello {{user.username}}</h1>
+<nav class="">
+    <a href="{%url 'home'%}">
+        <h1>
+            Second Child
+        </h1>
+    </a>
+    {%if user.is_authenticated%}
     <span>
-        <a href="{%url 'profile' username=user.username%}">Profile</a>
-        <a href="{%url 'logout'%}">Logout</a>
+        <a class="nav-link" href="{%url 'profile' username=user.username%}">Profile</a>
+        <a class="nav-link" href="{%url 'logout'%}">Logout</a>
     </span>
-</nav>
-
-{%else%}
-
-<nav>
-    <h1>Hello Guest</h1>
+    {%else%}
     <span>
-        <a href="{%url 'login' %}">Login</a>
-        <a href="{%url 'signup'%}">SignUp</a>
+        <a class="nav-link" href="{%url 'login' %}">Login</a>
+        <a class="nav-link" href="{%url 'signup'%}">SignUp</a>
     </span>
+    {%endif%}
+
 </nav>
-
-{%endif%}
-
 
 {%endblock content%}
