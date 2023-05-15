@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f2f2f2;
+    background: #f9d1d1;
 }
 
 :root {
@@ -44,3 +44,410 @@ nav {
     border: 2px solid black;
     border-radius: 10px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.login-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9d1d1;
+} 
+
+::selection {
+    color: #fff;
+    background: #53f0e3;
+}
+
+.wrapper {
+    width: 380px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.wrapper form {
+    margin: 40px 0;
+}
+
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        margin-left: 0px;
+    }
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
+
+form .field .input-area {
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    background: none;
+    caret-color: pink;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+
+form .field input:focus,
+form .field.valid input {
+    border-color: palevioletred;
+}
+
+form .field.shake input,
+form .field.error input {
+    border-color: #dc3545;
+}
+
+.field .input-area i {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.input-area .icon {
+    left: 15px;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+}
+
+.input-area .error-icon {
+    right: 15px;
+    color: #dc3545;
+}
+
+form input:focus~.icon,
+form .field.valid .icon {
+    color: #5372F0;
+}
+
+form .field.shake input:focus~.icon,
+form .field.error input:focus~.icon {
+    color: #bfbfbf;
+}
+
+form input::placeholder {
+    color: #bfbfbf;
+    font-size: 17px;
+}
+
+form .field .error-txt {
+    color: #dc3545;
+    text-align: left;
+    margin-top: 5px;
+}
+
+form .field .error {
+    display: none;
+}
+
+form .field.shake .error,
+form .field.error .error {
+    display: block;
+}
+
+form .pass-txt {
+    text-align: left;
+    margin-top: -10px;
+}
+
+.wrapper a {
+    color: #5372F0;
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+form input[type="submit"] {
+    height: 50px;
+    margin-top: 30px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    background: #5372F0;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #2c52ed;
+}
+
+
+
+.navbar {
+    background: #ffb9b9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    
+  }
+
+
+  
+  .navbar h1 {
+    color: #f1356d;
+    
+  }
+  .navbar .links {
+    margin-left: auto;
+  }
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  .navbar a:hover {
+    color: #f1356d;
+  }
+  .content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+.quote{
+    display: flex;
+    justify-content: center;
+    background-color: #f9d1d1;
+
+}
+
+  blockquote{
+    display:block;
+    background: white;
+    padding: 15px 20px 15px 45px;
+    margin: auto;
+    position: relative;
+    
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+    
+    /*Borders - (Optional)*/
+    border-left: 15px solid #c76c0c;
+    border-right: 2px solid #c76c0c;
+    
+    /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+  }
+  
+  blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+    
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+  }
+  
+  blockquote::after{
+    /*Reset to make sure*/
+    content: "";
+  }
+  
+  blockquote a{
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+  }
+  
+  blockquote a:hover{
+   color: #666;
+  }
+  
+  blockquote em{
+    font-style: italic;
+  }
+
+  
+  .container{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+  }
+  .card{
+      background: white;
+      width:270px;
+      margin: 10px;
+      border-radius: 15px;
+  }
+  .card-image{
+      height: 170px;
+      margin-bottom: 15px;
+      background-size: cover;
+      border-radius: 15px 15px 0 0;
+
+  }
+    .card h3{
+      padding: 10px;    
+    }
+    .card h1{
+    padding: 10px;
+    }
+    .card p{
+    padding: 10px;
+    }
+    .card a{
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    }
+    .card:hover{
+        background-color: palevioletred;
+        color: white;
+        cursor:pointer;
+        transform: scale(1.03);
+        transition: all 1s ease;
+    }
+
+    .emp-profile{
+        padding: 3%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 0.5rem;
+        background: #fff;
+    }
+    .profile-img{
+        text-align: center;
+    }
+    .profile-img img{
+        width: 70%;
+        height: 100%;
+    }
+    .profile-img .file {
+        position: relative;
+        overflow: hidden;
+        margin-top: -20%;
+        width: 70%;
+        border: none;
+        border-radius: 0;
+        font-size: 15px;
+        background: #212529b8;
+    }
+    .profile-img .file input {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        top: 0;
+    }
+    .profile-head h5{
+        color: #333;
+    }
+    .profile-head h6{
+        color: #0062cc;
+    }
+    .profile-edit-btn{
+        border: none;
+        border-radius: 1.5rem;
+        width: 70%;
+        padding: 2%;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+    }
+    .proile-rating{
+        font-size: 12px;
+        color: #818182;
+        margin-top: 5%;
+    }
+    .proile-rating span{
+        color: #495057;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .profile-head .nav-tabs{
+        margin-bottom:5%;
+    }
+    .profile-head .nav-tabs .nav-link{
+        font-weight:600;
+        border: none;
+    }
+    .profile-head .nav-tabs .nav-link.active{
+        border: none;
+        border-bottom:2px solid #0062cc;
+    }
+    .profile-work{
+        padding: 14%;
+        margin-top: -15%;
+    }
+    .profile-work p{
+        font-size: 12px;
+        color: #818182;
+        font-weight: 600;
+        margin-top: 10%;
+    }
+    .profile-work a{
+        text-decoration: none;
+        color: #495057;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .profile-work ul{
+        list-style: none;
+    }
+    .profile-tab label{
+        font-weight: 600;
+    }
+    .profile-tab p{
+        font-weight: 600;
+        color: #0062cc;
+    }

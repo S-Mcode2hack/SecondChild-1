@@ -1,13 +1,15 @@
 {%block content%}
 
 
-<nav class="">
+<nav class="navbar">
     <a href="{%url 'home'%}">
         <h1>
             Second Child
         </h1>
     </a>
     {%if user.is_authenticated%}
+    <div class="links">
+        
     <span>
         <a class="nav-link" href="{%url 'profile' username=user.username%}">Profile</a>
         <a class="nav-link" href="{%url 'logout'%}">Logout</a>
@@ -18,6 +20,7 @@
         <a class="nav-link" href="{%url 'signup'%}">SignUp</a>
     </span>
     {%endif%}
+</div>
 
 </nav>
 
